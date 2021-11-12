@@ -14,8 +14,9 @@
         <input type="text" v-model="newTask.text" placeholder="Insert a new Task" @keyup.enter="addTask">
         <button @click="addTask" >Add to the list</button>
         <ul>
-            <li v-bind:class="{linethrough : task.done}" v-for="(task, i) in tasks" :key="i">
+            <li :class="{linethrough : task.done}" v-for="(task, i) in tasks" :key="i">
                 {{ task.text }}
+                <span @click="doneTask(i)"> &checkmark; </span>
                 <span @click="removeTask(i)"> &olcross; </span>
             </li>
         </ul>

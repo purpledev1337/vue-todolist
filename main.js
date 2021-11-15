@@ -12,12 +12,12 @@
 var app = new Vue({
     el: '#container',
     data: {
-        newTask: [
+        newTask:
             {
                 text: "",
                 done: false
             }
-        ],
+        ,
         tasks: [
             {
                 text: "Fare la spesa",
@@ -48,12 +48,12 @@ var app = new Vue({
     methods: {
         addTask(){
             this.tasks.push(this.newTask);
-            this.newTask = [
+            this.newTask =
                 {
                     text: "",
                     done: false
                 }
-            ];
+            ;
         },
         removeTask(index){
             this.tasks.splice(index,1);

@@ -1,8 +1,69 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: royalblue;
+}
+
+h1 {
+    text-align: center;
+}
+
+#container {
+    width: 60%;
+    min-width: 800px;
+    margin: 0 auto;
+    font-size: 2em;
+}
+
+
+#input_line > button {
+    width: 40px;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#input_box {
+    padding: 15px;
+    width: 40%;
+    border-radius: 20px;
+}
+
+.task {
+    /* line-height: 60px; */
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
 span {
-    font-size: 1.5em;
-    text-decoration: none;
+    margin: 0 25px;
+}
+
+#check {
+    background-color: green;
+    border-radius: 50%;
+    /* transform: scale(1.6); */
+    padding: 5px;
+}
+
+#uncheck {
+    background-color: darkred;
+    border-radius: 0;
+    /* transform: scale(1.4); */
+    padding: 6px;
+}
+
+#check, #uncheck {
+    /* height: 20px; */
 }
 
 .linethrough {
     text-decoration: line-through;
+    opacity: 0.3;
+    transition: all 0.4s;
 }

@@ -10,17 +10,16 @@
 <body>
 
     <div id="container">
-
-        <input type="text" v-model="newTask.text" placeholder="Insert a new Task" @keyup.enter="addTask">
-        <button @click="addTask" >Add to the list</button>
-        <ul>
-            <li :class="{linethrough : task.done}" v-for="(task, i) in tasks" :key="i">
-                {{ task.text }}
-                <span @click="doneTask(i)"> &checkmark; </span>
-                <span @click="removeTask(i)"> &olcross; </span>
-            </li>
-        </ul>
-
+            <h1>To Boo Reminder List</h1>
+            <div id="input_line">
+                <input id="input_box" type="text" v-model="newTask.text" placeholder="Insert a new Task" @keyup.enter="addTask">
+                <button @click="addTask"> &plus; </button>
+            </div>
+            <div class="task" v-for="(task, i) in tasks" :key="i">
+                <button id="uncheck" @click="removeTask(i)"> &minus; </button>
+                <span :class="{linethrough : task.done}" >{{ task.text }}</span>
+                <button id="check" @click="doneTask(i)"> &checkmark; </button>
+            </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
